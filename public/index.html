@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="noteApp">
+<head>
+  <title>Notes</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+</head>
+<body>
+  <div class="container" ng-controller="NoteController" ng-cloak>
+
+    <form class="form-inline">
+      <input id="note-name" type="text" ng-model="newNoteName" />
+      <input id="note-secret" type="text" ng-model="newNoteSecret" />
+
+      <button id="add-btn" class="btn btn-success" ng-click="addNote(newNoteName, newNoteSecret)">Add</button>
+    </form>
+  </div>
+
+  <script type="text/javascript" src="/js/note.js"></script>
+</body>
+</html>

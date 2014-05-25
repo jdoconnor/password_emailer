@@ -14,8 +14,11 @@ require './app'
 # use Napa::Middleware::Logger
 
 use Napa::Middleware::AppMonitor
-use Napa::Middleware::Authentication
-use ActiveRecord::ConnectionAdapters::ConnectionManagement
-
 run ApplicationApi
+
+use Rack::Static,
+  :root => "public"
+
+use Rack::Static, :urls => ["/"], :root => 'public', :index => 'index.html'
+use Rack::Static, :urls => ["/js", "/images"], :root => "public"
 
