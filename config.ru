@@ -16,9 +16,4 @@ require './app'
 use Napa::Middleware::AppMonitor
 run ApplicationApi
 
-use Rack::Static,
-  :root => "public"
-
-use Rack::Static, :urls => ["/"], :root => 'public', :index => 'index.html'
-use Rack::Static, :urls => ["/js", "/images"], :root => "public"
-
+use Rack::Static, root: "public", index: 'index.html'

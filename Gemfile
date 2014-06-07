@@ -10,6 +10,7 @@ gem 'encryptor'
 gem 'unicorn'
 gem 'redis'
 gem 'grape-swagger'
+gem 'mandrill-api', require: 'mandrill'
 
 group :development,:test do
   gem 'pry'

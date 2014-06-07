@@ -2,19 +2,33 @@
 <html ng-app="noteApp">
 <head>
   <title>Notes</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
 </head>
 <body>
-  <div class="container" ng-controller="NoteController" ng-cloak>
+  <form action="notes" method="post">
+    <p>
+      <label>Name</label>
+      <input name="name"></input>
+    </p>
 
-    <form class="form-inline">
-      <input id="note-name" type="text" ng-model="newNoteName" />
-      <input id="note-secret" type="text" ng-model="newNoteSecret" />
+    <p>
+      <label>Secret</label>
+      <textarea name="secret"></textarea>
+    </p>
 
-      <button id="add-btn" class="btn btn-success" ng-click="addNote(newNoteName, newNoteSecret)">Add</button>
-    </form>
-  </div>
+    <p>
+      <label>Email Address</label>
+      <input name="email"></input>
+    </p>
 
-  <script type="text/javascript" src="/js/note.js"></script>
+    <p>
+      <label>Seconds until expires</label>
+      <input name="expires_in_seconds" value="86400"></input>
+    </p>
+
+    <p>
+      <input type="submit" />
+    </p>
+  </form>
+
 </body>
 </html>
